@@ -8,66 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
-    
-    @media (max-width: 768px) {
-            nav {
-                flex-wrap: wrap;
-                padding: 20px;
-            }
-
-            header {
-                height: auto;
-                padding: 60px 20px;
-                background-attachment: scroll;
-            }
-
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            #contato form {
-                padding: 20px;
-            }
-
-            section {
-                padding: 50px 15px;
-            }
-
-  .menu-toggle {
-    display: block;
-    color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-
-  .menu {
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-
-  .menu a {
-    margin: 10px 0;
-    padding: 10px 20px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-}
-
-.menu-toggle {
-  display: none;
-}
-    
     * {
       margin: 0;
       padding: 0;
@@ -89,6 +29,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       z-index: 1000;
     }
 
@@ -105,6 +46,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -257,20 +199,44 @@
 
     /* Responsividade */
     @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .menu {
+        flex-direction: column;
+        margin-top: 15px;
+      }
+
+      .menu a {
+        margin: 10px 0;
+      }
+
+      header {
+        height: auto;
+        padding: 60px 20px;
+        background-attachment: scroll;
+      }
+
       header h1 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
       }
 
       header p {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       section h2 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
       .logo {
         font-size: 2rem;
+      }
+
+      #contato form {
+        padding: 20px;
       }
     }
   </style>
@@ -279,16 +245,13 @@
 
   <!-- Navbar -->
   <nav>
-  <div class="logo">Green Generation</div>
-  <div class="menu-toggle" id="menu-toggle">
-    <i class="fas fa-bars"></i>
-  </div>
-  <div class="menu" id="menu">
-    <a href="#sobre">Sobre</a>
-    <a href="http://127.0.0.1:5500/cursos.html#Topico%202">Book Hardwares</a>
-    <a href="#Curso">Curso</a>
-  </div>
-</nav>
+    <div class="logo">Green Generation</div>
+    <div class="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="http://127.0.0.1:5500/cursos.html#Topico%202">Book Hardwares</a>
+      <a href="#Curso">Curso</a>
+    </div>
+  </nav>
 
   <!-- Header -->
   <header>
@@ -332,15 +295,6 @@
       });
     });
   </script>
-  
-<script>
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-</script>
-  
 </body>
 </html>
