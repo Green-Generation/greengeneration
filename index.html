@@ -8,6 +8,44 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
+    
+    @media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .menu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .menu a {
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+    
     * {
       margin: 0;
       padding: 0;
