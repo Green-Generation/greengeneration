@@ -3,303 +3,258 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Hardwares</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <title>Green Generation - Inovação Sustentável</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f5f5f5;
-      color: #333;
+      font-family: 'Roboto', sans-serif;
+      background-color: #272727;
+      color: #fff;
+      overflow-x: hidden;
       line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(135deg, #2c3e50, #16a085);
-      padding: 120px 20px 80px;
-      color: #fff;
-      text-align: center;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Navbar */
+    nav {
+      width: 100%;
+      padding: 20px 50px;
+      background: linear-gradient(-9deg, #1D1D1D, #28a745);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    header h1 {
-      font-size: 4rem;
-      font-weight: 600;
+    .logo {
+      font-family: 'Oswald', sans-serif;
+      font-size: 7rem;
+      font-weight: bold;
+      color: #00ff7f;
       margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
     }
 
-    header h2 {
-      font-size: 1.8rem;
-      font-weight: 400;
-      opacity: 0.85;
-    }
-
-    nav ul {
+    .menu {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      list-style: none;
-      margin-top: 30px;
     }
 
-    nav ul li {
-      margin: 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
+    nav a {
       color: #fff;
-      font-weight: 600;
-      background-color: #1abc9c;
-      padding: 12px 30px;
-      border-radius: 30px;
-      transition: background-color 0.4s ease, transform 0.3s ease;
-      letter-spacing: 1px;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 10px 25px;
+      border-radius: 50px;
+      margin: 5px 10px;
+      transition: background-color 0.3s ease;
+      font-weight: 500;
     }
 
-    nav ul li a:hover {
-      background-color: #1e2c29;
-      transform: scale(1.1);
+    nav a:hover {
+      background-color: #28a745;
     }
 
-    .progress-bar-container {
-      width: 100%;
-      height: 8px;
-      background: #e0e0e0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10000;
-    }
-
-    .progress-bar {
-      height: 100%;
-      background-color: #1abc9c;
-      width: 0%;
-      transition: width 0.3s ease;
-    }
-
-    section {
-      padding: 100px 20px;
-      background-color: #fff;
+    /* Header */
+    header {
+      position: relative;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1494970187445-47a0587b16e9') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      transition: all 0.5s ease-in-out;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      margin-bottom: 50px;
+      background-attachment: fixed;
+      padding: 0 20px;
+    }
+
+    header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      color: #f0f0f0;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      font-size: 1rem;
+      background-color: #28a745;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-top: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Seções */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
       margin-bottom: 20px;
-      color: #16a085;
     }
 
     section p {
-      font-size: 1.3rem;
-      max-width: 900px;
-      margin: 0 auto 30px;
-      color: #666;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
       line-height: 1.8;
     }
 
-    .book-link {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 35px;
-      background-color: #16a085;
-      color: #fff;
-      border-radius: 25px;
-      text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      font-weight: 600;
+    #sobre { background-color: #2d7f2b; }
+    #tipos { background-color: #2a2a2a; }
+    #grafico { background-color: #343434; }
+    #contato { background-color: #282828; }
+
+    /* Formulário de Contato */
+    #contato form {
+      max-width: 600px;
+      margin: 40px auto 0;
+      display: flex;
+      flex-direction: column;
     }
 
-    .book-link:hover {
-      background-color: #1abc9c;
-      transform: scale(1.05);
-    }
-
-    .book-cover {
-      width: 220px;
-      height: 330px;
-      border-radius: 15px;
-      overflow: hidden;
-      margin: 30px auto;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-      border: 3px solid #ddd;
-    }
-
-    .book-cover img {
+    #contato input,
+    #contato textarea {
+      padding: 15px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      font-size: 1rem;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: border 0.3s;
+      background: #f9f9f9;
+      color: #000;
     }
 
-    .book-cover:hover img {
-      transform: scale(1.05);
+    #contato input:focus,
+    #contato textarea:focus {
+      border-color: #28a745;
+      outline: none;
     }
 
-    footer {
-      background-color: #2c3e50;
-      color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .social-icons a {
-      color: #ffd700;
-      margin: 0 15px;
-      font-size: 2rem;
-      transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #fff;
-    }
-
-    .back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #16a085;
-      color: #fff;
+    #contato button {
+      padding: 15px;
+      background-color: #28a745;
+      color: white;
       border: none;
-      border-radius: 50%;
-      padding: 18px;
-      font-size: 1.8rem;
+      border-radius: 50px;
+      font-size: 1.2rem;
       cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      transition: 0.3s;
     }
 
-    .back-to-top:hover {
-      background-color: #1e2c29;
-      transform: scale(1.1);
+    #contato button:hover {
+      background-color: #218838;
     }
 
+    /* Responsividade */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      section h2 {
+        font-size: 2rem;
+      }
+
+      .logo {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
-
 <body>
-  <div class="progress-bar-container">
-    <div class="progress-bar" id="progress-bar"></div>
-  </div>
 
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Green Generation</div>
+    <div class="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="http://127.0.0.1:5500/cursos.html#Topico%202">Book Hardwares</a>
+      <a href="#Curso">Curso</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
   <header>
-    <h1>Book Hardwares</h1>
-    <h2>Descubra livros que transformam o futuro</h2>
-    <nav>
-      <ul>
-        <li><a href="#livro1">Livro 1</a></li>
-        <li><a href="#livro2">Livro 2</a></li>
-        <li><a href="#livro3">Livro 3</a></li>
-        <li><a href="#livro4">Livro 4</a></li>
-        <li><a href="#livro5">Livro 5</a></li>
-        <li><a href="#livro6">Livro 6</a></li>
-      </ul>
-    </nav>
+    <div>
+      <h1>Transformando o Futuro com Sustentabilidade</h1>
+      <p>Inovações que ajudam o planeta com soluções sustentáveis para a tecnologia.</p>
+      <a href="#sobre" class="btn">Saiba Mais</a>
+    </div>
   </header>
 
-  <section id="livro1">
-    <h2>Livro 1</h2>
-    <div class="book-cover">
-      <img src="https://via.placeholder.com/220x330.png?text=Capa+Livro+1" alt="Capa do Livro 1">
-    </div>
-    <p>Uma jornada fascinante pelo mundo da tecnologia ecológica.</p>
-    <a class="book-link" href="#">Leia mais</a>
+  <!-- Seções -->
+  <section id="sobre">
+    <h2>Sobre a Green Generation</h2>
+    <p>Somos uma empresa dedicada à inovação sustentável, desenvolvendo soluções tecnológicas que beneficiam o meio ambiente. Criamos uma rede de livros para alimentar o conhecimento sobre hardwares e seu descarte indevido, além de um curso com conhecimentos gerais sobre hardware e seu funcionamento.</p>
   </section>
 
-  <section id="livro2">
-    <h2>Livro 2</h2>
-    <div class="book-cover">
-      <img src="https://via.placeholder.com/220x330.png?text=Capa+Livro+2" alt="Capa do Livro 2">
-    </div>
-    <p>Conheça as mentes por trás da revolução verde no hardware.</p>
-    <a class="book-link" href="#">Leia mais</a>
+  <section id="contato">
+    <h2>Mande um Gmail</h2>
+    <p>Se você tem alguma dúvida ou quer saber mais sobre nossos projetos, entre em contato conosco via Gmail.</p>
+    <form action="#">
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu email" required />
+      <textarea placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
-  <section id="livro3">
-    <h2>Livro 3</h2>
-    <div class="book-cover">
-      <img src="https://via.placeholder.com/220x330.png?text=Capa+Livro+3" alt="Capa do Livro 3">
-    </div>
-    <p>Como o design consciente pode mudar o futuro da tecnologia.</p>
-    <a class="book-link" href="#">Leia mais</a>
-  </section>
-
-  <section id="livro4">
-    <h2>Livro 4</h2>
-    <div class="book-cover">
-      <img src="https://via.placeholder.com/220x330.png?text=Capa+Livro+4" alt="Capa do Livro 4">
-    </div>
-    <p>As escolhas sustentáveis que você pode fazer hoje.</p>
-    <a class="book-link" href="#">Leia mais</a>
-  </section>
-
-  <section id="livro5">
-    <h2>Livro 5</h2>
-    <div class="book-cover">
-      <img src="https://via.placeholder.com/220x330.png?text=Capa+Livro+5" alt="Capa do Livro 5">
-    </div>
-    <p>Histórias inspiradoras de empresas e pessoas que mudaram o jogo.</p>
-    <a class="book-link" href="#">Leia mais</a>
-  </section>
-
-  <section id="livro6">
-    <h2>Livro 6</h2>
-    <div class="book-cover">
-      <img src="https://via.placeholder.com/220x330.png?text=Capa+Livro+6" alt="Capa do Livro 6">
-    </div>
-    <p>O futuro da sustentabilidade nas suas mãos.</p>
-    <a class="book-link" href="#">Leia mais</a>
-  </section>
-
-  <footer>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-    </div>
-    <p>&copy; 2025 Book Hardwares | <a href="#" style="color:#FFD700;">Política de Privacidade</a></p>
-  </footer>
-
-  <button class="back-to-top" onclick="scrollToTop()">&uarr;</button>
-
+  <!-- Script para animação de rolagem -->
   <script>
-    // Scroll progress
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const percent = (scrollTop / scrollHeight) * 100;
-      document.getElementById('progress-bar').style.width = percent + "%";
-    });
+    window.addEventListener('scroll', function () {
+      let sections = document.querySelectorAll('section');
+      let scrollY = window.scrollY;
 
-    // Back to top
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Smooth scroll para os links do menu
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
+      sections.forEach(function (section) {
+        let sectionTop = section.offsetTop;
+        if (scrollY + window.innerHeight > sectionTop + 100) {
+          section.classList.add('visible');
+        } else {
+          section.classList.remove('visible');
         }
       });
     });
   </script>
+
 </body>
 </html>
