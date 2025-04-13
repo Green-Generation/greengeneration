@@ -34,15 +34,15 @@
 
         .header-home {
             position: relative;
-            top: 0;
-            left: 0;
+            top: 100;
+            left: 100;
+            bottom: 10;
             width: 100%;
-            height: 50px;
+            height: -50px;
             display: flex;
             align-items: center;
             padding-left: 10px;
             z-index: 999;
-            margin-top: -13%;
         }
 
 
@@ -189,12 +189,12 @@
         .back-to-top {
             position: fixed;
             bottom: 30px;
-            right: 30px;
+            right: 7px;
             background: #8c9c6b;
             color: #fff;
             border: none;
             border-radius: 50%;
-            padding: 18px;
+            padding: 15px;
             font-size: 1.8rem;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
@@ -203,6 +203,97 @@
         .back-to-top:hover {
             background-color: #1e2c29;
             transform: scale(1.1);
+        }
+
+        body {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* Para dispositivos com tela de largura até 768px (exemplo de celulares médios) */
+        @media (max-width: 768px) {
+            body {
+                font-size: 12px;
+            }
+
+            h1 {
+                font-size: 14px;
+                padding: 10px;
+                display: flex;
+            }
+
+
+
+            .container {
+                padding: 10px;
+            }
+
+            /* Adapte o layout para telas menores */
+            .header {
+                font-size: 14px;
+            }
+
+            h1 {
+                word-wrap: break-word;
+                /* Força a quebra de palavras longas */
+                overflow-wrap: break-word;
+                max-width: 100%;
+                font-size: 10px;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 50px;
+            }
+
+            .header-home {
+                font-size: 12px;
+                padding: 10px;
+                display: block;
+            }
+        }
+
+
+        /* Para dispositivos com tela de largura até 480px (exemplo de celulares pequenos) */
+        @media (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+
+            .container {
+                padding: 5px;
+            }
+
+            /* Adapte o layout para telas muito pequenas */
+            .header {
+                font-size: 14px;
+            }
+
+            h1 {
+                word-wrap: break-word;
+                /* Força a quebra de palavras longas */
+                overflow-wrap: break-word;
+                max-width: 100%;
+                font-size: 10px;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 50px;
+            }
+
+            .menu {
+                display: block;
+                /* Exibe o menu de forma diferente para celulares pequenos */
+            }
+
+            .header-home {
+                font-size: 12px;
+                padding: 10px;
+                display: block;
+            }
         }
     </style>
 </head>
@@ -217,10 +308,10 @@
         <h2>Descubra livros que transformam o futuro</h2>
         <nav>
             <ul>
-                <!-- <div class="header-home">
+                <div class="header-home">
                     <li><a href="https://green-generation.github.io/greengeneration/index.html"><i
                                 class="fa fa-home"></i> Home</a></li>
-                </div> -->
+                </div>
                 <li><a href="#livro1">Livro 1</a></li>
                 <li><a href="#livro2">Livro 2</a></li>
                 <li><a href="#livro3">Livro 3</a></li>
@@ -300,8 +391,9 @@
         </div>
         <p>&copy; 2025 Book Hardwares | <a href="#" style="color:#FFD700;">Política de Privacidade</a></p>
     </footer>
-
-    <button class="back-to-top" onclick="scrollToTop()">&uarr;</button>
+    <div class="botaolugar">
+        <button class="back-to-top" onclick="scrollToTop()">&uarr;</button>
+    </div>
 
     <script>
         // Scroll progress
