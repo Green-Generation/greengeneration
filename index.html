@@ -51,6 +51,20 @@
       <button type="submit">Enviar</button>
     </form>
   </section>
+<script>
+    window.addEventListener('scroll', function () {
+      let sections = document.querySelectorAll('section');
+      let scrollY = window.scrollY;
+
+      sections.forEach(function (section) {
+        let sectionTop = section.offsetTop;
+        if (scrollY + window.innerHeight > sectionTop + 100) {
+          section.classList.add('visible');
+        } else {
+          section.classList.remove('visible');
+        }
+      });
+    });
 </body>
 
 </html>
