@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    /* Corrigido o uso de background */
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    border-left: 500px solid black;
+    border-right: 500px solid black;
+    padding: 0 10px;
+    height: 100%;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+ul {
+    background: black;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background: linear-gradient(45deg, #0000FF, #00BFFF, #87CEFA);
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 150px;
+}
+
+.dropdown-content a {
+    color: blue;
+    display: block;
+    text-align: left;
+    border: 1px solid rgb(122, 122, 122);
+}
+
+.dropdown-content a:hover {
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+table {
+    width: 100%;
+    /* Aumentei para 100% para ocupar a tela em dispositivos menores */
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+th,
+td {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: left;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+    .container {
+        border-left: 300px solid black;
+        /* Ajusta bordas para telas médias */
+        border-right: 300px solid black;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        border-left: 100px solid black;
+        /* Ajusta bordas para telas menores */
+        border-right: 100px solid black;
+        padding: 0 5px;
+    }
+
+    ul {
+        display: flex;
+        /* Altera o menu para flexbox em telas pequenas */
+        flex-direction: column;
+        /* Menu em coluna */
+    }
+
+    li {
+        float: none;
+        /* Remove o float em telas pequenas */
+    }
+
+    li a {
+        width: 100%;
+        /* Faz o link ocupar toda a largura */
+        padding: 10px 0;
+        /* Reduz o espaçamento */
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+        /* Garante que a tabela ocupe 100% da largura da tela */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        border-left: none;
+        border-right: none;
+        /* Remove as bordas em dispositivos muito pequenos */
+    }
+
+    h1,
+    h2 {
+        font-size: 1.5rem;
+        /* Ajusta o tamanho da fonte para telas pequenas */
+    }
+
+    li a {
+        padding: 8px 0;
+        /* Reduz ainda mais o espaçamento dos links */
+    }
+}
+
+.escola-button {
+    position: fixed;
+    bottom: 20px;
+    right: 500px;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+}
+
+/* Estilo para telas menores (dispositivos móveis) */
+@media screen and (max-width: 600px) {
+    .fixed-button {
+        width: 40px;
+        /* Diminuindo o tamanho da imagem no celular */
+        height: 40px;
+        bottom: 10px;
+        /* Ajustando a posição mais perto do canto */
+        right: 500px;
+    }
+}
+
+img {
+    max-width: 100%;
+    /* A largura máxima da imagem será 100% do contêiner pai */
+    height: auto;
+    /* A altura será ajustada automaticamente, mantendo a proporção */
+    display: block;
+    /* Remove espaçamento em torno da imagem */
+}
+
+.placeholder {
+    width: 70%;
+    /* Define a largura do espaço */
+    height: 243px;
+    /* Define a altura do espaço */
+    /*background-color: lightgray;*/
+    /* Define a cor de fundo para visualização */
+    /*border: 2px dashed black;
+    /* Um estilo de borda para destacar a área */
+    bottom: 0;
+    /* Fixa no rodapé da tela */
+    left: 10px;
+    /* Centraliza horizontalmente */
+    right: 0px;
+    transform: translateX(20%);
+    /* Ajusta para centralizar a div */
+    z-index: 500;
+    /* Garante que ela fique acima de outros elementos, se necessário */
+}
