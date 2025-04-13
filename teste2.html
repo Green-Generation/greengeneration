@@ -16,79 +16,82 @@
 
     body {
       font-family: 'Lora', serif;
-      background-color: #252525; /* Cor de fundo suave e clara */
-      color: #fffefe;
+      background-color: #252525;
+      color: #fff;
       line-height: 1.7;
     }
 
     nav {
       width: 100%;
-      padding: 20px 50px;
-      background: linear-gradient(135deg, #374237, #1e3828); /* Tons de verde e cinza sofisticados */
+      padding: 20px 5%;
+      background: linear-gradient(135deg, #374237, #1e3828);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      position: fixed;
+      top: 0;
+      left: 0;
       z-index: 1000;
     }
 
     .logo {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
-      color: #f1f1f1; /* Logo mais clara para contraste */
-      letter-spacing: 2px;
+      color: #f1f1f1;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
     .menu {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: #f1f1f1;
       text-decoration: none;
-      font-size: 1.2rem;
-      margin: 0 20px;
-      padding: 8px 20px;
+      font-size: 1rem;
+      padding: 8px 16px;
       border-radius: 30px;
-      transition: all 0.3s ease;
+      transition: 0.3s ease;
       font-weight: 500;
     }
 
     nav a:hover {
-      background-color: #7c8a6a; /* Cor de destaque mais suave */
+      background-color: #7c8a6a;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      transform: translateY(-5px);
+      transform: translateY(-2px);
     }
 
     header {
       position: relative;
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1494970187445-47a0587b16e9') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1494970187445-47a0587b16e9') center/cover no-repeat fixed;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      background-attachment: fixed;
       padding: 0 20px;
       box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+      padding-top: 80px;
     }
 
     header h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 4.5rem;
-      color: #f9f9f9; /* Cor clara para destacar sobre o fundo */
+      font-size: 3.5rem;
+      color: #f9f9f9;
       margin-bottom: 20px;
       text-transform: uppercase;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
     }
 
     header p {
-      font-size: 1.5rem;
-      color: #eaf2f1; /* Cor suave para o texto */
+      font-size: 1.3rem;
+      color: #eaf2f1;
       max-width: 700px;
       margin: 0 auto;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
@@ -96,9 +99,9 @@
 
     .btn {
       display: inline-block;
-      padding: 18px 40px;
-      font-size: 1.1rem;
-      background-color: #708d66; /* Verde com toque elegante */
+      padding: 16px 36px;
+      font-size: 1rem;
+      background-color: #708d66;
       color: #fff;
       border-radius: 50px;
       text-decoration: none;
@@ -113,7 +116,7 @@
     }
 
     section {
-      padding: 80px 20px;
+      padding: 80px 10%;
       text-align: center;
       opacity: 0;
       transform: translateY(30px);
@@ -127,22 +130,22 @@
 
     section h2 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 20px;
-      color: #3b4f2f; /* Verde escuro elegante */
+      color: #3b4f2f;
       text-transform: uppercase;
     }
 
     section p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       max-width: 800px;
       margin: 0 auto;
       line-height: 1.8;
-      color: #555;
+      color: #333;
     }
 
-    #sobre { background-color: #f0f4e3; } /* Verde claro suave */
-    #cursos { background-color: #d7e2df; } /* Cinza suave */
+    #sobre { background-color: #f0f4e3; }
+    #cursos { background-color: #d7e2df; }
     #contato { background-color: #f1f8e9; }
 
     #contato form {
@@ -181,7 +184,7 @@
       color: white;
       border: none;
       border-radius: 12px;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
@@ -190,321 +193,45 @@
       background-color: #5b7245;
     }
 
-    /* 📱 Celulares Pequenos */
-@media (max-width: 360px) {
-  header h1 {
-    font-size: 1.7rem;
-  }
-/* Seção Curso */
-  #cursos {
-    padding: 20px 15px;
-    text-align: justify;
-  }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        padding: 20px;
+      }
 
-  #cursos h2 {
-    font-size: 1.3rem;
-    text-align: center;
-    margin-bottom: 10px;
-  }
+      .menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+      }
 
-  #cursos p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
+      header {
+        height: auto;
+        padding: 100px 20px 60px;
+      }
 
-  /* Seção Contato */
-  #contato {
-    padding: 20px 15px;
-    text-align: center;
-  }
+      header h1 {
+        font-size: 2.3rem;
+      }
 
-  #contato h2 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
+      header p {
+        font-size: 1rem;
+      }
 
-  #contato p {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-  }
+      section h2 {
+        font-size: 2rem;
+      }
 
-  #contato form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+      section p {
+        font-size: 1rem;
+      }
 
-  #contato input,
-  #contato textarea {
-    font-size: 1rem;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  #contato button {
-    padding: 12px;
-    font-size: 1rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-
-  #contato button:hover {
-    background-color: #45a049;
-  }
-}
-
- #sobre {
-    padding: 20px 15px;
-    text-align: justify;
-  }
-
-  #sobre h2 {
-    font-size: 1.3rem;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  #sobre p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-}
-
-  header p,
-  section p {
-    font-size: 0.9rem;
-  }
-
-  .btn {
-    font-size: 0.85rem;
-    padding: 10px 20px;
-  }
-
-  nav a {
-    font-size: 0.8rem;
-  }
-}
-
-header {
-    text-align: center;
-    padding: 20px 10px;
-  }
-
-  header h1 {
-    font-size: 1.6rem; /* menorzinho no celular */
-    margin-bottom: 10px;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* espaço entre os links */
-  }
-
-  nav a {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* 📱 Celulares Médios (ex: Galaxy S20 FE) */
-@media (min-width: 361px) and (max-width: 430px) {
-  header h1 {
-    font-size: 1.9rem;
-  }
-
-/* Seção Curso */
-  #cursos {
-    padding: 20px 15px;
-    text-align: justify;
-  }
-
-  #cursos h2 {
-    font-size: 1.3rem;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  #cursos p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  /* Seção Contato */
-  #contato {
-    padding: 20px 15px;
-    text-align: center;
-  }
-
-  #contato h2 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-  }
-
-  #contato p {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-  }
-
-  #contato form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #contato input,
-  #contato textarea {
-    font-size: 1rem;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  #contato button {
-    padding: 12px;
-    font-size: 1rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-
-  #contato button:hover {
-    background-color: #45a049;
-  }
-}
- #sobre {
-    padding: 20px 15px;
-    text-align: justify;
-  }
-
-  #sobre h2 {
-    font-size: 1.3rem;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  #sobre p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-}
-
-  header p,
-  section p {
-    font-size: 0.95rem;
-  }
-
-  .btn {
-    font-size: 0.9rem;
-    padding: 12px 25px;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-  }
-}
-header {
-    text-align: center;
-    padding: 20px 10px;
-  }
-
-  header h1 {
-    font-size: 1.6rem; /* menorzinho no celular */
-    margin-bottom: 10px;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* espaço entre os links */
-  }
-
-  nav a {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* 📱 Tablets */
-@media (min-width: 431px) and (max-width: 768px) {
-  header h1 {
-    font-size: 2.2rem;
-  }
-
-  header p,
-  section p {
-    font-size: 1.05rem;
-  }
-
-  .btn {
-    font-size: 1rem;
-    padding: 14px 30px;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-}
-
-/* 💻 Notebooks e desktops médios */
-@media (min-width: 769px) and (max-width: 1024px) {
-  header h1 {
-    font-size: 2.4rem;
-  }
-
-  header p,
-  section p {
-    font-size: 1.1rem;
-  }
-
-  .btn {
-    font-size: 1.05rem;
-    padding: 16px 35px;
-  }
-
-  nav a {
-    font-size: 1.05rem;
-  }
-}
-
-/* 🖥️ Telas grandes */
-@media (min-width: 1025px) {
-  header h1 {
-    font-size: 2.6rem;
-  }
-
-  header p,
-  section p {
-    font-size: 1.2rem;
-  }
-
-  .btn {
-    font-size: 1.1rem;
-    padding: 18px 40px;
-  }
-
-  nav a {
-    font-size: 1.1rem;
-  }
-}
+      .btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -552,7 +279,7 @@ header {
     </form>
   </section>
 
-  <!-- Script de rolagem -->
+  <!-- Script de animação ao rolar -->
   <script>
     window.addEventListener('scroll', function () {
       let sections = document.querySelectorAll('section');
