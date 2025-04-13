@@ -190,21 +190,46 @@
       background-color: #5b7245;
     }
 
+    /* Responsividade */
     @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .menu {
+        flex-direction: column;
+        margin-top: 15px;
+      }
+
+      .menu a {
+        margin: 10px 0;
+      }
+
+      header {
+        height: auto;
+        padding: 60px 20px;
+        background-attachment: scroll;
+      }
+
       header h1 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
       }
 
       header p {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       section h2 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
       .logo {
         font-size: 2rem;
+      }
+
+      #contato form {
+        padding: 20px;
       }
     }
   </style>
