@@ -52,6 +52,12 @@ nav {
     justify-content: space-between;
 }
 
+.sway {
+    width: 30px;
+    vertical-align: middle;
+    justify-content: space-between;
+}
+
 /* Estilo dos links da navbar */
 nav a {
     color: #f1f1f1;
