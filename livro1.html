@@ -1,14 +1,193 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mundo do Hardware</title>
+    <link rel="stylesheet" href="../css/livro1.css">
+
+    <!-- Fonte e ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
- <h1>Livro1</h1>
+
+    <!-- NAV -->
+    <nav>
+        <a href="../html/ebook.html">E-book</a>
+        <a href="#pagina1">Página 1</a>
+        <a href="#pagina2">Página 2</a>
+        <a href="#pagina3">Página 3</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1>💻 Mundo do Hardware</h1>
+        <p>Descubra os componentes que fazem seu computador funcionar</p>
+    </header>
+
+    <!-- PÁGINA 1 -->
+    <section id="pagina1" class="page" data-aos="fade-up">
+        <h2>🧠 O que é Hardware?</h2>
+        <p>Hardware é a parte física do computador – tudo o que você pode tocar: placas, cabos, periféricos, fontes,
+            etc. Ele trabalha junto com o software (os programas e sistemas que rodam na máquina).</p>
+        <img src="https://static.todamateria.com.br/upload/ha/rd/hardwareelementosfinal-cke.jpg" width="80%">
+
+        <h2>🔧 Tipos de Hardware</h2>
+
+        <h3>🔹 Entrada</h3>
+        <ul>
+            <li>Teclado</li>
+            <img class="fotos" src="../image/teclado.jpg">
+            <li>Mouse</li>
+            <img class="fotos" src="../image/mouse.jpg">
+            <li>Microfone</li>
+            <img class="fotos" src="../image/microfone.jpg">
+
+        </ul>
+
+        <h3>🔹 Saída</h3>
+        <ul>
+            <li>Monitor</li>
+            <img class="fotos" src="../image/monitor.png">
+            <li>Caixa de som</li>
+            <img class="fotos" src="../image/caixa de som.jpg">
+            <li>Projetor</li>
+            <img class="fotos" src="../image/projeto.jpg">
+        </ul>
+
+        <h3>🔹 Entrada/Saída</h3>
+        <ul>
+            <li>Pen drives</li>
+            <img class="fotos" src="../image/pen-drive.jpg">
+            <li>HD e SSD</li>
+            <img class="fotos" src="../image/HD.jpg">
+            <li>Placa de som</li>
+            <img class="fotos" src="../image/rede de som.jpeg">
+        </ul>
+
+        <h3>🔹 Processamento</h3>
+        <ul>
+            <li>Placa-mãe</li>
+            <img class="fotos" src="../image/placamae.jpg">
+            <li>Processador (CPU)</li>
+            <img class="fotos" src="../image/processador.jpg">
+            <li>Memória RAM</li>
+            <img class="fotos" src="../image/memoria.jpg">
+            <li>Placa de vídeo (GPU)</li>
+            <img class="fotos" src="../image/placadevideo.jpg">
+        </ul>
+
+        <h2>🧩 Componentes Principais do Computador</h2>
+
+        <h3>🔲 Placa-mãe</h3>
+        <p>Conecta todos os componentes e distribui energia entre eles. Tem entradas para CPU, RAM, armazenamento,
+            etc.
+        </p>
+
+        <h3>⚙️ Processador</h3>
+        <p>Executa tarefas e cálculos. Ex: Intel Core i5, AMD Ryzen 7. Medido em GHz.</p>
+
+        <h3>💾 Memória RAM</h3>
+        <p>Armazena dados temporariamente durante o uso. Mais RAM = mais desempenho multitarefa.</p>
+
+        <h3>🪙 Armazenamento</h3>
+        <p>Guarda dados permanentemente. Tipos:</p>
+        <ul>
+            <li><strong>HDD</strong>: Barato e espaçoso</li>
+            <li><strong>SSD</strong>: Rápido e confiável</li>
+            <li><strong>NVMe</strong>: Extremamente rápido</li>
+        </ul>
+
+        <h3>🎮 Placa de Vídeo</h3>
+        <p>Processa gráficos e melhora desempenho em jogos, edições, etc.</p>
+
+        <h3>🔌 Fonte de Alimentação</h3>
+        <p>Distribui energia para os componentes. Medida em watts (W).</p>
+
+        <h3>🧊 Resfriamento</h3>
+        <p>Evita superaquecimento. Inclui coolers, dissipadores, ou sistemas líquidos.</p>
+
+        <h3>🖥️ Gabinete</h3>
+        <p>O gabinete é aonde voce colocas as peças de hardware e la fica guardado os componentes.</p>
+        <canvas id="graficoHardware"></canvas>
+        <script>
+            const ctx = document.getElementById('graficoHardware').getContext('2d');
+            const graficoHardware = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Uso Correto de Hardware', 'Uso Incorreto de Hardware'],
+                    datasets: [{
+                        data: [82, 20],
+                        backgroundColor: ['#4CAF50', '#F44336'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Estimativa de Uso de Hardware no Brasil',
+                            font: {
+                                size: 20,
+                                weight: 'bolder'
+                            }
+                        },
+                        legend: {
+                            labels: {
+                                font: {
+                                    size: 15
+                                }
+                            }
+                        },
+                        tooltip: {
+                            bodyFont: {
+                                size: 14
+                            },
+                            callbacks: {
+                                label: function (context) {
+                                    return context.label + ': ' + context.parsed + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+        </script>
+    </section>
+
+    <!-- Página 2 -->
+    <section id="pagina2" class="page" data-aos="fade-up">
+        <h2>📖 Página 2</h2>
+        <p>Conteúdo em breve...</p>
+    </section>
+
+    <!-- Página 3 -->
+    <section id="pagina3" class="page" data-aos="fade-up">
+        <h2>📖 Página 3</h2>
+        <p>Conteúdo em breve...</p>
+    </section>
+
+    <footer>
+        &copy; 2025 Mundo do Hardware · Todos os direitos reservados
+    </footer>
+
+    <!-- Script AOS para animações -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
 </body>
 
 </html>
