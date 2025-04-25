@@ -118,6 +118,14 @@ footer {
     header h1 {
         font-size: 2.3rem;
     }
+    h1,
+    h2,
+    h3 {
+       font-size: 24px;
+       font-weight: 900 bolder;
+       text-align: center;
+       align-items: center;
+       }
 }
 
 .fotos {
