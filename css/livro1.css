@@ -136,8 +136,8 @@ h3 {
     font-size: 24px;
     font-weight: 900 bolder;
     text-align: center;
+    align-items: center;
 }
-
 #graficoHardware {
     max-width: 50%;
     max-height: 45%;
