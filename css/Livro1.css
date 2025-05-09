@@ -142,8 +142,8 @@ h3 {
 #graficoHardware {
     width: 100% !important;
     height: auto !important;
-    max-width: 600px;
-    /* você pode ajustar esse valor */
+    max-width: 60%;
+    
     display: block;
     margin: 0 auto;
     /* centraliza o gráfico */
