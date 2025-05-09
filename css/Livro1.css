@@ -118,14 +118,6 @@ footer {
     header h1 {
         font-size: 2.3rem;
     }
-    h1,
-    h2,
-    h3 {
-       font-size: 24px;
-       font-weight: 900 bolder;
-       text-align: center;
-       align-items: center;
-       }
 }
 
 .fotos {
@@ -146,9 +138,13 @@ h3 {
     text-align: center;
     align-items: center;
 }
+
 #graficoHardware {
-    max-width: 50%;
-    max-height: 45%;
-    margin: 5% auto;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 600px;
+    /* você pode ajustar esse valor */
     display: block;
+    margin: 0 auto;
+    /* centraliza o gráfico */
 }
