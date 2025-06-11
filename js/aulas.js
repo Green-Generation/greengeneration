@@ -1,33 +1,33 @@
 const videoLinks = [
   {
     url: "https://www.youtube.com/watch?v=ZSIrMa7JYc8&t=215s",
-    title: "Curso de Sustentabilidade na Prática",
-    description: "Aprenda práticas sustentáveis para aplicar no dia a dia."
+    title: "Etapa 1: O Que É Hardware? Entenda os Componentes do Seu PC",
+    description: "Introdução aos conceitos básicos de hardware. Diferença entre hardware e software, exemplos de dispositivos (CPU, RAM, HD/SSD, placa-mãe, etc)."
   },
   {
-    url: "https://youtu.be/dQw4w9WgXcQ",
-    title: "Introdução à Energia Renovável",
-    description: "Conheça as principais fontes de energia limpa e suas vantagens."
+    url: "https://www.youtube.com/watch?v=HNRb1vdE0bA&pp=ygU7Q29uaGXDp2EgYXMgUGXDp2FzOiBDb21wb25lbnRlcyBFc3NlbmNpYWlzIGRlIHVtIENvbXB1dGFkb3I%3D",
+    title: "Etapa 2: Conheça as Peças: Componentes Essenciais de um Computador",
+    description: "Explicação mais detalhada sobre os principais componentes internos de um PC. Função de cada peça e como elas se conectam (placa-mãe, processador, memória, armazenamento, placa de vídeo, fonte, gabinete)."
   },
   {
-    url: "https://vimeo.com/76979871",
-    title: "Impacto Ambiental e Tecnologia",
-    description: "Como a tecnologia pode ajudar a reduzir impactos ambientais."
+    url: "VIDEO",
+    title: "Etapa3: Descarte Correto e Incorreto de Componentes Eletrônicos",
+    description: "Impactos ambientais do lixo eletrônico. Como descartar corretamente peças velhas ou quebradas. Locais de coleta e reciclagem. Por que não jogar no lixo comum."
   },
   {
-    url: "https://www.youtube.com/watch?v=3JZ_D3ELwOQ",
-    title: "Reciclagem e Economia Circular",
-    description: "Entenda o conceito de economia circular e reciclagem."
+    url: "VIDEO",   
+    title: "Etapa 4: Montando um PC Passo a Passo: O Que Você Precisa Saber",
+    description: "Guia prático e introdutório de montagem de PC. Ordem das peças, dicas de cuidado (descarga eletrostática), uso de ferramentas básicas"
   },
   {
-    url: "https://vimeo.com/22439234",
-    title: "Proteção da Biodiversidade",
-    description: "A importância da biodiversidade para o equilíbrio do planeta."
+    url: "VCIDEO",
+    title: "Etapa 5: Erros Comuns ao Montar um PC (e Como Evitar!)",
+    description: "Lista dos principais erros de iniciantes: incompatibilidades de peças, fonte fraca, falta de pasta térmica, montagem sem aterramento, etc."
   },
   {
-    url: "https://www.youtube.com/watch?v=V-_O7nl0Ii0",
-    title: "Tecnologias Verdes em Ação",
-    description: "Conheça tecnologias inovadoras para um futuro sustentável."
+    url: "VIDEO",
+    title: "Etapa 6: Manutenção, Upgrades e Dicas de Conservação do Seu PC",
+    description: "Como cuidar do computador ao longo do tempo. Limpeza física, verificação de temperatura, troca de pasta térmica, quando e como fazer upgrades."
   }
 ];
 
