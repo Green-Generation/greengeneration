@@ -1,30 +1,31 @@
+// Array com os vídeos
 const videoLinks = [{
-        url: "",
+        url: "https://www.youtube.com/watch?v=ZSIrMa7JYc8&pp=ygUdY29uaGVjaW1lbnRvcyBzb2JyZSBoYXJkd2FyZXM%3D",
         title: "Etapa 1: O Que É Hardware? Entenda os Componentes do Seu PC",
         description: "Introdução aos conceitos básicos de hardware. Diferença entre hardware e software, exemplos de dispositivos (CPU, RAM, HD/SSD, placa-mãe, etc)."
     },
     {
-        url: "",
+        url: "https://www.youtube.com/watch?v=HNRb1vdE0bA&pp=ygUgY29uaGVjaW1lbnRvcyBzb2JyZSBwcmVjYXMgZGUgcGM%3D",
         title: "Etapa 2: Conheça as Peças: Componentes Essenciais de um Computador",
         description: "Explicação mais detalhada sobre os principais componentes internos de um PC. Função de cada peça e como elas se conectam (placa-mãe, processador, memória, armazenamento, placa de vídeo, fonte, gabinete)."
     },
     {
-        url: "video",
+        url: "https://www.youtube.com/watch?v=HNRb1vdE0bA&pp=ygUgY29uaGVjaW1lbnRvcyBzb2JyZSBwcmVjYXMgZGUgcGM%3D",
         title: "Etapa 3: Descarte Correto e Incorreto de Componentes Eletrônicos",
         description: "Impactos ambientais do lixo eletrônico. Como descartar corretamente peças velhas ou quebradas. Locais de coleta e reciclagem. Por que não jogar no lixo comum."
     },
     {
-        url: "video",
+        url: "https://www.youtube.com/watch?v=HNRb1vdE0bA&pp=ygUgY29uaGVjaW1lbnRvcyBzb2JyZSBwcmVjYXMgZGUgcGM%3D",
         title: "Etapa 4: Montando um PC Passo a Passo: O Que Você Precisa Saber",
         description: "Guia prático e introdutório de montagem de PC. Ordem das peças, dicas de cuidado (descarga eletrostática), uso de ferramentas básicas."
     },
     {
-        url: "video",
+        url: "https://www.youtube.com/watch?v=HNRb1vdE0bA&pp=ygUgY29uaGVjaW1lbnRvcyBzb2JyZSBwcmVjYXMgZGUgcGM%3D",
         title: "Etapa 5: Erros Comuns ao Montar um PC (e Como Evitar!)",
         description: "Lista dos principais erros de iniciantes: incompatibilidades de peças, fonte fraca, falta de pasta térmica, montagem sem aterramento, etc."
     },
     {
-        url: "video",
+        url: "https://www.youtube.com/watch?v=HNRb1vdE0bA&pp=ygUgY29uaGVjaW1lbnRvcyBzb2JyZSBwcmVjYXMgZGUgcGM%3D",
         title: "Etapa 6: Manutenção, Upgrades e Dicas de Conservação do Seu PC",
         description: "Como cuidar do computador ao longo do tempo. Limpeza física, verificação de temperatura, troca de pasta térmica, quando e como fazer upgrades."
     }
@@ -32,7 +33,6 @@ const videoLinks = [{
 
 // Função para extrair o ID do vídeo do YouTube
 function getYouTubeID(url) {
-    // pode ser link normal https://www.youtube.com/watch?v=ID ou youtu.be/ID
     if (url.includes("youtu.be")) {
         return url.split("youtu.be/")[1].split(/[?&]/)[0];
     } else if (url.includes("youtube.com")) {
@@ -67,23 +67,28 @@ function embedVideo(video) {
 window.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("videoContainer");
 
-    videoLinks.forEach(video => {
-        const videoHTML = embedVideo(video);
-        if (videoHTML) container.innerHTML += videoHTML;
-    });
-
-    // Animação fade-in dos vídeos ao entrar no viewport
-    const videos = document.querySelectorAll(".video-wrapper");
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
+    // Verificar se o container existe
+    if (container) {
+        videoLinks.forEach(video => {
+            const videoHTML = embedVideo(video);
+            if (videoHTML) container.insertAdjacentHTML('beforeend', videoHTML);
         });
-    }, { threshold: 0.1 });
 
-    videos.forEach(video => observer.observe(video));
+        // Animação fade-in dos vídeos ao entrar no viewport
+        const videos = document.querySelectorAll(".video-wrapper");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.1 });
+
+        videos.forEach(video => observer.observe(video));
+    } else {
+        console.error("O container de vídeos não foi encontrado!");
+    }
 });
 
 const darkModeBtn = document.getElementById('darkModeBtn');
