@@ -1,4 +1,3 @@
-// Array com os vídeos
 const videoLinks = [{
         url: "",
         title: "Etapa 1: O Que É Hardware? Entenda os Componentes do Seu PC",
