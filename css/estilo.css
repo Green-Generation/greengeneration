@@ -41,10 +41,24 @@ nav {
     text-transform: uppercase;
 }
 
+.logozin {
+    width: 30px;
+    vertical-align: middle;
+    justify-content: space-between;
+}
+
+/* Links do menu */
 .menu {
     display: flex;
-    gap: 8px;
+    gap: 15px;
     flex-wrap: wrap;
+}
+
+/* Logo pequena ao lado do "Curso" */
+.logozin .sway {
+    width: 30px;
+    vertical-align: middle;
+    justify-content: space-between;
 }
 
 .menu a {
@@ -150,9 +164,11 @@ header p {
         transform: translateY(0) rotate(0deg);
         opacity: 0.7;
     }
+
     50% {
         opacity: 0.3;
     }
+
     100% {
         transform: translateY(-120vh) rotate(360deg);
         opacity: 0;
@@ -277,28 +293,35 @@ section p {
         flex-direction: column;
         padding: 20px;
     }
+
     .menu {
         flex-direction: column;
         align-items: center;
         width: 100%;
         margin-top: 10px;
     }
+
     header {
         height: auto;
         padding: 100px 20px 60px;
     }
+
     header h1 {
         font-size: 2.3rem;
     }
+
     header p {
         font-size: 1rem;
     }
+
     section h2 {
         font-size: 2rem;
     }
+
     section p {
         font-size: 1rem;
     }
+
     .btn {
         padding: 14px 28px;
         font-size: 1rem;
@@ -309,9 +332,11 @@ section p {
     header h1 {
         font-size: 1.7rem;
     }
+
     header p {
         font-size: 0.95rem;
     }
+
     .btn {
         font-size: 0.9rem;
         padding: 10px 20px;
