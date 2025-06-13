@@ -1,0 +1,148 @@
+/* Reset básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #252525;
+    /* Cor de fundo no modo claro */
+    color: #333;
+    /* Cor do texto no modo claro */
+    transition: background 0.3s, color 0.3s;
+    /* Transição suave para mudanças de modo */
+}
+
+header {
+    background: linear-gradient(135deg, #374237, #1e3828);
+    color: #fff;
+    padding: 15px 30px;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 24px;
+}
+
+.home-button {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #5b7245;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.home-button:hover {
+    background-color: white;
+    color: #2c3e50;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.download-item {
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+    border-left: 6px solid #252525;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.download-item:hover {
+    transform: translateY(-5px);
+}
+
+.download-item h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.download-item a {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.download-item a:hover {
+    background-color: #217dbb;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    font-size: 14px;
+    margin-top: 40px;
+    color: #555;
+}
+
+
+/* Modo Noturno */
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    /* Cor de fundo no modo noturno (preto fosco) */
+    color: #ddd;
+    /* Texto claro no modo noturno */
+}
+
+body.dark-mode .download-item {
+    background-color: #333;
+    /* Fundo escuro nos itens de download */
+    border-left-color: #2ecc71;
+    /* Verde musgo nos itens */
+}
+
+body.dark-mode .download-item a {
+    background-color: #2ecc71;
+    /* Verde musgo para os botões */
+}
+
+body.dark-mode .download-item a:hover {
+    background-color: #27ae60;
+    /* Cor mais escura para o hover */
+}
+
+body.dark-mode footer {
+    background-color: #444;
+    /* Fundo escuro no footer */
+    color: #aaa;
+    /* Texto mais claro no footer */
+}
+
+body.dark-mode .navbar {
+    background: linear-gradient(to right, #2a2a2a, #2980b9);
+    /* Navbar mais escura no modo noturno */
+}
