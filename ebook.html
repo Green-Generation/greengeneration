@@ -2,104 +2,125 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/ebook.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <title>Green Generation - Livros</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Green Generation - Livros</title>
+    <link rel="stylesheet" href="./css/ebook.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="title">Green Generation</div>
-    <ul>
-      <li><a href="https://green-generation.github.io/greengeneration/index.html"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="#livro1">Livro 1</a></li>
-      <li><a href="#livro2">Livro 2</a></li>
-      <li><a href="#livro3">Livro 3</a></li>
-      <li><a href="#livro4">Livro 4</a></li>
-    </ul>
-  </nav>
+    <!-- Ponto para scroll topo -->
+    <div id="top"></div>
 
-  <!-- Seções dos Livros -->
-  <section id="livro1">
-    <h2>Livro 1</h2>
-    <div class="livro-container">
-      <div class="book-cover">
-        <a href="https://green-generation.github.io/greengeneration/livro1.html" target="_blank">
-          <img src="./imagem/conhecimento-gerais.png" alt="Capa do Livro 1" />
-        </a>
-      </div>
-      <p class="paragrafo">Livro voltado para conhecimentos gerais, ideal para iniciantes em tecnologia e hardware.</p>
-    </div>
-    <a class="book-link" href="https://green-generation.github.io/greengeneration/livro1.html" target="_blank">Ver Livro</a>
-  </section>
+    <header>
+        <nav class="navbar">
+            <div class="title">Green Generation <i class="fas fa-leaf leaf-icon"></i></div>
+            <ul class="nav-links">
+                <li><a class="btn-home" href="http://127.0.0.1:5500/Pagina%20Principal/Site%20escola.html"><i
+                            class="fa fa-home"></i> Home</a></li>
+                <li><a href="#livro1"><i class="fas fa-book-open"></i> Conhecimento Geral</a></li>
+                <li><a href="#livro2"><i class="fas fa-cogs"></i> Montagem Completa</a></li>
+                <li><a href="#livro3"><i class="fas fa-globe-americas"></i> Sustentabilidade</a></li>
+                <li><a href="#livro4"><i class="fas fa-lightbulb"></i> Inovações</a></li>
+            </ul>
+            <button id="darkModeBtn" aria-label="Alternar modo escuro">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
 
-  <section id="livro2">
-    <h2>Livro 2</h2>
-    <div class="livro-container">
-      <div class="book-cover">
-        <a href="https://green-generation.github.io/greengeneration/livro2.html" target="_blank">
-          <img src="./imagem/escolhas-sustentaveis.png" alt="Capa do Livro 2" />
-        </a>
-      </div>
-      <p class="paragrafo">Este livro aborda o processo completo de montagem de computadores, peça por peça.</p>
-    </div>
-    <a class="book-link" href="https://green-generation.github.io/greengeneration/livro2.html" target="_blank">Ver Livro</a>
-  </section>
+    <main>
+        <section id="livro1" class="fade-section">
+            <h2>Conhecimento Geral <span class="highlight">Tecnologia</span></h2>
+            <div class="livro-container">
+                <div class="book-cover">
+                    <a href="https://green-generation.github.io/greengeneration/livro1.html" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./imagem/conhecimento-gerais.png" alt="Livro Conhecimento Geral" />
+                    </a>
+                </div>
+                <p class="paragrafo">
+                    Livro voltado para <span class="highlight">conhecimentos gerais</span>, ideal para iniciantes em
+                    tecnologia e hardware.
+                </p>
+            </div>
+            <a class="book-link" href="https://green-generation.github.io/greengeneration/livro1.html" target="_blank"
+                rel="noopener noreferrer">
+                Ver Livro <i class="fas fa-arrow-right"></i>
+            </a>
+            <hr class="divider" />
+        </section>
 
-  <section id="livro3">
-    <h2>Livro 3</h2>
-    <div class="livro-container">
-      <div class="book-cover">
-        <a href="https://green-generation.github.io/greengeneration/livro3.html" target="_blank">
-          <img src="./imagem/reaproveitamento-de-hardware.png" alt="Capa do Livro 3" />
-        </a>
-      </div>
-      <p class="paragrafo">Focado na instalação de sistemas operacionais, desde Windows até distribuições Linux.</p>
-    </div>
-    <a class="book-link" href="https://green-generation.github.io/greengeneration/livro3.html" target="_blank">Ver Livro</a>
-  </section>
+        <section id="livro2" class="fade-section">
+            <h2>Montagem Completa <span class="highlight">Hardware</span></h2>
+            <div class="livro-container">
+                <div class="book-cover">
+                    <a href="https://green-generation.github.io/greengeneration/livro2.html" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./imagem/escolhas-sustentaveis.png" alt="Livro Montagem Completa" />
+                    </a>
+                </div>
+                <p class="paragrafo">
+                    Este livro aborda o processo completo de montagem de computadores, peça por peça, com foco em <span
+                        class="highlight">sustentabilidade</span>.
+                </p>
+            </div>
+            <a class="book-link" href="https://green-generation.github.io/greengeneration/livro2.html" target="_blank"
+                rel="noopener noreferrer">
+                Ver Livro <i class="fas fa-arrow-right"></i>
+            </a>
+            <hr class="divider" />
+        </section>
 
-  <section id="livro4">
-    <h2>Livro 4</h2>
-    <div class="livro-container">
-      <div class="book-cover">
-        <a href="https://green-generation.github.io/greengeneration/livro4.html" target="_blank">
-          <img src="./imagem/vida-util.png" alt="Capa do Livro 4" />
-        </a>
-      </div>
-      <p class="paragrafo">Focado na instalação de sistemas operacionais, desde Windows até distribuições Linux.</p>
-    </div>
-    <a class="book-link" href="https://green-generation.github.io/greengeneration/livro4.html" target="_blank">Ver Livro</a>
-  </section>
+        <section id="livro3" class="fade-section">
+            <h2>Sustentabilidade <span class="highlight">Planeta</span></h2>
+            <div class="livro-container">
+                <div class="book-cover">
+                    <a href="https://green-generation.github.io/greengeneration/livro3.html" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./imagem/sustentabilidade.png" alt="Livro Sustentabilidade" />
+                    </a>
+                </div>
+                <p class="paragrafo">
+                    Descubra as práticas de sustentabilidade para um mundo mais <span class="highlight">verde</span> e
+                    equilibrado.
+                </p>
+            </div>
+            <a class="book-link" href="https://green-generation.github.io/greengeneration/livro3.html" target="_blank"
+                rel="noopener noreferrer">
+                Ver Livro <i class="fas fa-arrow-right"></i>
+            </a>
+            <hr class="divider" />
+        </section>
 
-  <!-- Script para scroll suave em JavaScript -->
-  <script>
-    // Seleciona todos os links dentro do <nav>
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', function (e) {
-        // Se o link começa com "#", ele é interno (pra uma seção da página)
-        if (this.getAttribute('href').startsWith('#')) {
-          // Impede o comportamento padrão do link (pular direto)
-          e.preventDefault();
+        <section id="livro4" class="fade-section">
+            <h2>Inovações <span class="highlight">Futuro</span></h2>
+            <div class="livro-container">
+                <div class="book-cover">
+                    <a href="https://green-generation.github.io/greengeneration/livro4.html" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./imagem/vida-util.png" alt="Livro Inovações" />
+                    </a>
+                </div>
+                <p class="paragrafo">
+                    Inspire-se nas últimas <span class="highlight">inovações</span> que estão transformando o mercado
+                    tecnológico e ambiental.
+                </p>
+            </div>
+            <a class="book-link" href="https://green-generation.github.io/greengeneration/livro4.html" target="_blank"
+                rel="noopener noreferrer">
+                Ver Livro <i class="fas fa-arrow-right"></i>
+            </a>
+        </section>
+    </main>
 
-          // Pega o ID de destino, ex: "#livro3" -> "livro3"
-          const destinoID = this.getAttribute('href').substring(1);
+    <footer>
+        &copy; © 2025 Green Generation🌿
+    </footer>
 
-          // Encontra o elemento com esse ID
-          const destino = document.getElementById(destinoID);
-
-          // Se o destino existir, rola suavemente até ele
-          if (destino) {
-            destino.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-      });
-    });
-  </script>
+    <script src="./js/E-Book.JS"></script>
 </body>
 
 </html>
