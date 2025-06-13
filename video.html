@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Green Generation - Cursos em Vídeo</title>
+  <title>Green Generation 🌿 - Cursos em Vídeo</title>
   <link rel="stylesheet" href="./css/curso.css">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -15,27 +17,59 @@
   <!-- CSS -->
   <link rel="stylesheet" href="Site Video adm.css" />
 </head>
+
 <body>
 
   <header>
-    <h1>GREEN GENERATION</h1>
-    <p class="slogan">Tecnologia sustentável para um futuro melhor</p>
+    <nav class="navbar">
+      <div class="title">Green Generation <i class="fas fa-leaf leaf-icon"></i></div>
+      <ul class="nav-links">
+        <li><a class="btn-home" href="https://green-generation.github.io/greengeneration/index.html"><i
+              class="fa fa-home"></i> Home </a></li>
+        <li><a href="#etapa1" class="scroll-link"> Etapa 1</a></li>
+        <li><a href="#etapa2" class="scroll-link"> Etapa 2</a></li>
+        <li><a href="#etapa3" class="scroll-link"> Etapa 3</a></li>
+        <li><a href="#etapa4" class="scroll-link"> Etapa 4</a></li>
+        <li><a href="#etapa5" class="scroll-link"> Etapa 5</a></li>
+        <li><a href="#etapa6" class="scroll-link"> Etapa 6</a></li>
+        <button id="darkModeBtn" aria-label="Alternar modo escuro">
+          <i class="fas fa-moon"></i>
+        </button>
+      </ul>
+    </nav>
   </header>
 
-  <nav class="navbar">
-    <ul>
-      <li><a class="btn-home" href="https://green-generation.github.io/greengeneration/index.html"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="#cursos">Cursos</a></li>
-    </ul>
-  </nav>
-
   <main class="container" id="cursos">
-    <h2>Acompanhe os cursos abaixo</h2>
-    <div id="videoContainer"></div>
+    <div id="videoContainer">
+      <div id="etapa1" class="video-wrapper">
+        <h3>Etapa 1: O Que É Hardware?</h3>
+        <p>Entenda os componentes do seu PC.</p>
+      </div>
+      <div id="etapa2" class="video-wrapper">
+        <h3>Etapa 2: Conheça as Peças do PC</h3>
+        <p>Componentes essenciais para o seu computador.</p>
+      </div>
+      <div id="etapa3" class="video-wrapper">
+        <h3>Etapa 3: Como Montar Seu PC</h3>
+        <p>Passo a passo para montar seu próprio computador.</p>
+      </div>
+      <div id="etapa4" class="video-wrapper">
+        <h3>Etapa 4: Sistema Operacional</h3>
+        <p>Escolha e instale o sistema ideal para seu PC.</p>
+      </div>
+      <div id="etapa5" class="video-wrapper">
+        <h3>Etapa 5: Cuidados com o Hardware</h3>
+        <p>Dicas para manter seu PC sempre saudável.</p>
+      </div>
+      <div id="etapa6" class="video-wrapper">
+        <h3>Etapa 6: Overclock e Personalização</h3>
+        <p>Otimize e personalize seu PC para o melhor desempenho.</p>
+      </div>
+    </div>
   </main>
 
   <footer id="contato">
-    <p>© 2025 Green Generation — Tecnologia a favor do planeta</p>
+    <p>© 2025 Green Generation 🌿</p>
     <div class="socials">
       <a href="#" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="#" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -44,7 +78,8 @@
     </div>
   </footer>
 
-  <script src="./js/aulas.js"></script>
-
+  <!-- JS -->
+  <script src="./js/video1.js"></script>
 </body>
+
 </html>
