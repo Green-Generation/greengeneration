@@ -1,11 +1,11 @@
 // Array com os vídeos
 const videoLinks = [{
-        url: "https://www.youtube.com/watch?v=ZSIrMa7JYc8&pp=ygUdY29uaGVjaW1lbnRvcyBzb2JyZSBoYXJkd2FyZXM%3D",
+        url: "",
         title: "Etapa 1: O Que É Hardware? Entenda os Componentes do Seu PC",
         description: "Introdução aos conceitos básicos de hardware. Diferença entre hardware e software, exemplos de dispositivos (CPU, RAM, HD/SSD, placa-mãe, etc)."
     },
     {
-        url: "https://www.youtube.com/watch?v=HNRb1vdE0bA&pp=ygUgY29uaGVjaW1lbnRvcyBzb2JyZSBwcmVjYXMgZGUgcGM%3D",
+        url: "",
         title: "Etapa 2: Conheça as Peças: Componentes Essenciais de um Computador",
         description: "Explicação mais detalhada sobre os principais componentes internos de um PC. Função de cada peça e como elas se conectam (placa-mãe, processador, memória, armazenamento, placa de vídeo, fonte, gabinete)."
     },
