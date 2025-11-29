@@ -1,7 +1,7 @@
 // Array com os vídeos
 const videoLinks = [{
-        url: https://youtu.be/zexNDie8Sp4?si=yGNHN9i_YIAmqq0m,
-        title: "Etapa 1: O Que É Hardware? Entenda os Componentes do Seu PC",
+        url: ,
+        title: "Etapa 1: O Que É Hardware? Entenda os Componentes do Seu PC",11111111111111111111111111111111111
         description: "Introdução aos conceitos básicos de hardware. Diferença entre hardware e software, exemplos de dispositivos (CPU, RAM, HD/SSD, placa-mãe, etc)."
     },
     {
@@ -121,4 +121,5 @@ darkModeBtn.addEventListener('click', () => {
 
 // Carrega o tema assim que a página abre
 window.addEventListener('DOMContentLoaded', carregarTema);
+
 
