@@ -1,14 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mundo do Hardware</title>
+    <link rel="stylesheet" href="../css/livro3.css">
+
+    <!-- Fonte e ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
-<h1>livro2</h1>
+
+    <!-- NAV -->
+    <nav>
+        <a href="../html/ebook.html">E-BOOK</a>
+        <a href="#pagina1">Página 1</a>
+        <a href="#pagina2">Página 2</a>
+        <a href="#pagina3">Página 3</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🌱Escolhas Sustentáveis</h1>
+        <p>As escolhas sustentáveis que você pode fazer hoje para um mundo melhor.</p>
+    </header>
+
+
+    <!-- PÁGINA 1 -->
+    <section id="pagina1" class="page" data-aos="fade-up">
+        <h2>Dicas Sustentáveis 🛠️🌱</h2>
+        <p><strong>Pequenas ações</strong> no nosso dia a dia pode fazer uma grande diferença para o planeta.
+            Algumas ações que podemos realizar no nosso dia a dia:</p>
+        <p>• ♻️ Doe ou recicle equipamentos antigos.</p>
+        <p>• 🔋 Use pilhas e baterias recarregáveis.</p>
+        <p>• 💡 Desligue o computador da tomada ao não usar.</p>
+        <p>• 🛒 Compre peças de segunda mão ou recondicionadas.</p>
+        <p>• 🔧 Faça upgrades ao invés de trocar tudo.</p>
+        <p>• 🧠 Informe outras pessoas sobre descarte correto.</p>
+        <p>Se cada um de nós fizer sua parte e realizar essas práticas no dia a dia, estaremos contribuindo para um
+            futuro
+            mais sustentável e equilibrado com o meio ambiente.🌍 </p>
+
+        <h2>A Importância de Descartar Corretamente Equipamentos Antigos 🌍♻️</h2>
+        <p><strong>A importância</strong> de descartar equipamentos eletrônicos da forma certa é super importante
+            para proteger o meio ambiente e a vida no planeta. Muitos aparelhos que usamos no dia a dia podem contaminar
+            o
+            solo, a água e o ar por conta dos metais pesados e substâncias tóxicas. </p>
+
+        <p><strong>Descartar corretamente</strong> aparelhos eletrônicos é bem importante para proteger o planeta e a
+            nossa saúde.
+            Olhe o por que isso é tão importante:</p>
+
+
+        <p><strong>♻️ Redução de Poluição:</strong>
+            Quando jogamos celulares, computadores ou baterias no lixo comum, eles podem liberar substâncias tóxicas
+            que pode acabar contaminando o solo e a água.</p>
+
+
+        <p><strong>🔧 Reciclagem de Componentes:</strong>
+
+            Alguns hardwares que ainda não se tornou obsoleto pode ser reaproveitadas na produção de novos dispositivos,
+            diminuindo o descarte incorreto de lixo eletrônico.</p>
+
+
+        <p><strong>🌍 Menos Lixo no Planeta:</strong>
+            O lixo eletrônico esta aumentando cada vez mais a cada ano. Fazer o descarte correto ajuda a evitar o
+            acúmulo de poluição.</p>
+
+
+        <p><strong>🏥 Saúde da População:</strong>
+            Com o descarte incorreto de hardwares pode acabar criando problemas nas saúde das pessoas, como: riscos de
+            problemas de saúde e doenças respiratórias.</p>
+        <p><strong>📦 Lugar Correto:</strong>
+            Sempre leve seus dispositivos eletrônico a pontos de coleta onde pode fazer o descarte correto desses
+            hardwares.</p>
+        <p><strong>🌱 Contribua com o Futuro:</strong>
+            Cada ação que fazer conta o descarte corretamente, você ajuda a construir um mundo mais limpo e sustentável.
+        </p>
+    </section>
+
+    <!-- Página 2 -->
+    <section id="pagina2" class="page" data-aos="fade-up">
+        <h2>📖 Práticas Sustentáveis no Dia a Dia</h2>
+
+        <div class="chart-container">
+            <canvas id="meuGrafico"></canvas>
+        </div>
+
+        <!-- JS -->
+        <script src="../js/livro3.js"></script>
+    </section>
+
+    <!-- Página 3 -->
+    <section id="pagina3" class="page" data-aos="fade-up">
+        <h2>📖 Perguntas</h2>
+        <p>
+        <section id="pagina3" class="page" data-aos="fade-up">
+            <h2>📖 Quiz: O que você aprendeu sobre Hardware?</h2>
+            <div class="quiz-container">
+
+                <p><b>1. Por que é importante descartar equipamentos eletrônicos corretamente?</b></p>
+                <input type="radio" name="q1" value="errado"> Para reduzir o consumo de água<br>
+                <input type="radio" name="q1" value="certo"> Para evitar contaminação por substâncias tóxicas<br>
+                <input type="radio" name="q1" value="errado"> Para diminuir o uso de embalagens<br>
+                <input type="radio" name="q1" value="errado"> Para aumentar o preço de produtos eletrônicos<br><br>
+
+                <p><b>2. O descarte incorreto de lixo eletrônico pode causar:</b></p>
+                <input type="radio" name="q2" value="certo"> Contaminação do solo e da água<br>
+                <input type="radio" name="q2" value="errado"> Aumento na produção de oxigênio<br>
+                <input type="radio" name="q2" value="errado"> Crescimento de plantas mais rápido<br>
+                <input type="radio" name="q2" value="errado"> Redução da reciclagem<br><br>
+
+                <p><b>3. Uma forma de reduzir a produção de lixo eletrônico é:</b></p>
+                <input type="radio" name="q3" value="errado"> Comprar novos aparelhos sempre que possível<br>
+                <input type="radio" name="q3" value="errado"> Jogar componentes no lixo comum<br>
+                <input type="radio" name="q3" value="certo"> Doar ou reciclar equipamentos antigos<br>
+                <input type="radio" name="q3" value="errado"> Guardar tudo sem uso em casa<br><br>
+
+                <p><b>4. Um benefício da reciclagem de componentes eletrônicos é:</b></p>
+                <input type="radio" name="q4" value="errado"> Criar novos poluentes<br>
+                <input type="radio" name="q4" value="errado"> Aumentar o lixo descartado<br>
+                <input type="radio" name="q4" value="certo"> Reaproveitar materiais para novos produtos<br>
+                <input type="radio" name="q4" value="errado"> Enviar mais resíduos para aterros<br><br>
+
+                <p><b>5. Qual é a pratica Sustentável mais praticada no dia a dia:</b></p>
+                <input type="radio" name="q5" value="errado"> Concientizar pessoas<br>
+                <input type="radio" name="q5" value="errado"> Economizar energia<br>
+                <input type="radio" name="q5" value="errado"> Fazer upgrades de hardwares<br>
+                <input type="radio" name="q5" value="certo"> Reciclar e doar<br><br>
+
+                <button class="botao-quiz" onclick="corrigir()">Ver Resultado</button>
+                <div id="resultado"></div>
+            </div>
+        </section>
+        </p>
+    </section>
+    </section>
+
+    <footer>
+        &copy; 2025 Mundo do Hardware · Todos os direitos reservados
+    </footer>
+
+    <!-- Script AOS para animações -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
+    <script src="../js/livro3.js"></script>
+
+    <!-- Área onde o gráfico vai aparecer -->
+    <canvas id="graficoSustentavel" width="400" height="200"></canvas>
+
 </body>
 
-</html
+</html>
