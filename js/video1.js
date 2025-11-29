@@ -1,31 +1,31 @@
 // Array com os vídeos
 const videoLinks = [{
-        url: https://youtu.be/zexNDie8Sp4?si=yGNHN9i_YIAmqq0m,
+        url: "https://youtu.be/zexNDie8Sp4?si=yGNHN9i_YIAmqq0m",
         title: "Etapa 1: O Que É Hardware? Entenda os Componentes do Seu PC",
         description: "Introdução aos conceitos básicos de hardware. Diferença entre hardware e software, exemplos de dispositivos (CPU, RAM, HD/SSD, placa-mãe, etc)."
     },
     {
-        url: https://youtu.be/aOoiMeUWA_8?si=FUxAzA1sA3RYu7fj,
+        url: "https://youtu.be/aOoiMeUWA_8?si=FUxAzA1sA3RYu7fj",
         title: "Etapa 2: Conheça as Peças: Componentes Essenciais de um Computador",
         description: "Explicação mais detalhada sobre os principais componentes internos de um PC. Função de cada peça e como elas se conectam (placa-mãe, processador, memória, armazenamento, placa de vídeo, fonte, gabinete)."
     },
     {
-        url: https://youtu.be/dzFfnvtnFTc?si=5SxuC4KhJ6nVjA_Z,
+        url: "https://youtu.be/dzFfnvtnFTc?si=5SxuC4KhJ6nVjA_Z",
         title: "Etapa 3: Descarte Correto e Incorreto de Componentes Eletrônicos",
         description: "Impactos ambientais do lixo eletrônico. Como descartar corretamente peças velhas ou quebradas. Locais de coleta e reciclagem. Por que não jogar no lixo comum."
     },
     {
-        url: https://youtu.be/UURtjMluM6w?si=Bq3VvpuHV50HNcgm,
+        url: "https://youtu.be/UURtjMluM6w?si=Bq3VvpuHV50HNcgm",
         title: "Etapa 4: Montando um PC Passo a Passo: O Que Você Precisa Saber",
         description: "Guia prático e introdutório de montagem de PC. Ordem das peças, dicas de cuidado (descarga eletrostática), uso de ferramentas básicas."
     },
     {
-        url: https://youtu.be/m8lBkrIkIuI?si=m1TetU6QjNsgDc_4,
+        url: "https://youtu.be/m8lBkrIkIuI?si=m1TetU6QjNsgDc_4",
         title: "Etapa 5: Erros Comuns ao Montar um PC (e Como Evitar!)",
         description: "Lista dos principais erros de iniciantes: incompatibilidades de peças, fonte fraca, falta de pasta térmica, montagem sem aterramento, etc."
     },
     {
-        url: https://youtu.be/RTOogns6ljY?si=ZWP5D7Q9ZoHQBw3z,
+        url: "https://youtu.be/RTOogns6ljY?si=ZWP5D7Q9ZoHQBw3z",
         title: "Etapa 6: Manutenção, Upgrades e Dicas de Conservação do Seu PC",
         description: "Como cuidar do computador ao longo do tempo. Limpeza física, verificação de temperatura, troca de pasta térmica, quando e como fazer upgrades."
     }
@@ -121,6 +121,3 @@ darkModeBtn.addEventListener('click', () => {
 
 // Carrega o tema assim que a página abre
 window.addEventListener('DOMContentLoaded', carregarTema);
-
-
-
