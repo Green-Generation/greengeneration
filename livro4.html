@@ -1,14 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mundo do Hardware</title>
+    <link rel="stylesheet" href="./css/livro4.css">
+
+    <!-- Fonte e ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
-<h1>livro4</h1>
+
+    <!-- NAV -->
+    <nav>
+        <a href="../html/ebook.html">E-BOOK</a>
+        <a href="#pagina1">Página 1</a>
+        <a href="#pagina2">Página 2</a>
+        <a href="#pagina3">Página 3</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1> Como Aumentar o Tempo de Vida Útil do Seu Computador e Inovações do Futuro</h1>
+        <p>Melhorias e dicas para aumentar a vida útil do seu computador</p>
+    </header>
+
+
+    <!-- PÁGINA 1 -->
+    <section id="pagina1" class="page" data-aos="fade-up">
+        <h2>Dicas Sustentáveis 🛠️🌱</h2>
+        <p>Manter um computador funcionando bem por muitos anos não é difícil — mas exige alguns cuidados
+            simples que muita gente esquece. Além das boas práticas do presente, novas inovações tecnológicas estão
+            surgindo para aumentar ainda mais a durabilidade dos dispositivos no futuro.</p>
+
+        <h2>🛠️ Como aumentar a vida útil do computador hoje</h2>
+        <p><strong>🔹 1. Realize manutenção preventiva</p>
+        <p><strong>• Limpe poeira interna a cada 6 meses</strong></p>
+        <p><strong>• Troque a pasta térmica do processador e GPU a cada 1 ou 2 anos</strong></p>
+        <p><strong>• Mantenha o computador em local ventilado</strong></p>
+        <p><strong>• Sempre dar uma geral e uma limpada no computador para remover a poeira dos hardwares</strong></p>
+        <p>Poeira faz o computador superaquecer e diminuir o desempenho.</p>
+
+
+        <h2>🔹 2. Atualize componentes em vez de trocar tudo</h2>
+        <p>Upgrades que aumentam MUITO a vida útil:</p>
+        <p><strong>• Colocar SSD no lugar do HD</strong></p>
+        <p><strong>• Aumentar a memória RAM</strong></p>
+        <p><strong>• Adicionar coolers extras</strong></p>
+        <p><strong>• Trocar a fonte por uma de melhor qualidade</strong></p>
+        <p>Isso faz um PC antigo parecer novo.</p>
+
+        <h2>🔹 3. Use programas leves e cuide do sistema</h2>
+        <p><strong>• Desinstale aplicativos desnecessários</strong></p>
+        <p><strong>• Mantenha o antivírus atualizado</strong></p>
+        <p><strong>• Evite arquivos pesados no armazenamento</strong></p>
+        <p><strong>• Atualize o Windows/Linux/Mac regularmente</strong></p>
+        <p>O software também envelhece o computador.</p>
+
+        <h2>🔹 4. Evite superaquecimento</h2>
+        <p><strong>• Não use o notebook em cima de cama/sofá</strong></p>
+        <p><strong>• Utilize bases refrigeradas</strong></p>
+        <p><strong>• Nunca tampe as entradas de ar</strong></p>
+        <p>Calor é o maior inimigo do computador.</p>
+
+        <h2>🔹 5. Utilize filtro de linha</h2>
+        <p><strong>• Filtro de linha com proteção</strong></p>
+        <p><strong>• Nobreak (se for necessário)</strong></p>
+        <p>✘ Estabilizador pode prejudicar componentes.</p>
+
+        <h2>🔹 6. Faça backups e evite lotar o armazenamento</h2>
+        <p><strong>• Faça backup regularmente em HD externo, SSD ou nuvem</strong></p>
+        <p><strong>• Mantenha sempre espaço livre no armazenamento</strong></p>
+        <p>Quando o armazenamento fica cheio, o computador fica lento e se desgasta mais rápido.</p>
+
+        <h2>🌱 Reaproveitamento e sustentabilidade</h2>
+
+        <p><strong>• Transformar PCs antigos em computadores para estudo</strong></p>
+        <p><strong>• Usar peças em outros projetos</strong></p>
+        <p><strong>• Doar para escolas ou projetos sociais</strong></p>
+        <p><strong>• Aproveitar HDs antigos como armazenamento externo</strong></p>
+        <p><strong>• Criar servidores caseiros com peças reaproveitadas</strong></p>
+
+        <p>Reaproveitar = aumenta a vida útil + reduz lixo eletrônico.</p>
+    </section>
+
+    <!-- Página 2 -->
+    <section id="pagina2" class="page" data-aos="fade-up">
+        <h2>📖 Pagina 2</h2>
+        <h1>Dicas para Aumentar a Vida Útil do Computador</h1>
+
+        <div class="chart-container">
+            <canvas id="tipsChart"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../js/livro2.js"></script>
+    </section>
+
+    <!-- Página 3 -->
+    <section id="pagina3" class="page" data-aos="fade-up">
+        <h2>📖 Perguntas</h2>
+        <div class="question">
+            <p><b>1. O que pode aumentar a vida útil do computador no futuro?</b></p>
+            <input type="radio" name="q1" value="errado"> Usar sempre estabilizador<br>
+            <input type="radio" name="q1" value="certo"> Peças modulares e upgrades inteligentes<br>
+            <input type="radio" name="q1" value="errado"> Nunca atualizar o sistema<br>
+            <input type="radio" name="q1" value="errado"> Deixar o PC sempre cheio<br><br>
+        </div>
+
+        <div class="question">
+            <p><b>2. O que ajuda a aumentar a vida útil de um computador?</b></p>
+            <input type="radio" name="q2" value="errado"> Trocar tudo<br>
+            <input type="radio" name="q2" value="errado"> Deixar ligado sempre<br>
+            <input type="radio" name="q2" value="certo"> Usar peças reaproveitadas e upgrades<br>
+            <input type="radio" name="q2" value="errado"> Nunca limpar<br><br>
+        </div>
+
+        <div class="question">
+            <p><b>3. Qual é a forma correta de proteger seu computador contra energia ruim?</b></p>
+            <input type="radio" name="q3" value="errado"> Usar estabilizador<br>
+            <input type="radio" name="q3" value="certo"> Usar filtro de linha com proteção<br>
+            <input type="radio" name="q3" value="errado"> Ligar direto na tomada sem proteção<br>
+            <input type="radio" name="q3" value="errado"> Ligar em adaptadores velhos<br><br>
+        </div>
+
+        <div class="question">
+            <p><b>4. Por que é importante evitar superaquecimento?</b></p>
+            <input type="radio" name="q4" value="errado"> Porque deixa o PC mais bonito<br>
+            <input type="radio" name="q4" value="certo"> Porque o calor danifica componentes<br>
+            <input type="radio" name="q4" value="errado"> Porque aumenta o brilho da tela<br>
+            <input type="radio" name="q4" value="errado"> Porque economiza internet<br><br>
+        </div>
+        <div class="question">
+            <p><b>5. Qual é a dica que é menos utilizada pelas pessoas</b></p>
+            <input type="radio" name="q4" value="errado"> Uso correto de energia<br>
+            <input type="radio" name="q4" value="errado"> Programas leves e sistemas limpo<br>
+            <input type="radio" name="q4" value="errado"> Evitar superaquecimentos<br>
+            <input type="radio" name="q4" value="certo"> Usar filtro de linha<br><br>
+        </div>
+
+        <button class="botao-quiz" onclick="corrigir()">Ver Resultado</button>
+        <div id="resultado"></div>
+    </section>
+    </section>
+
+    <footer>
+        &copy; 2025 Mundo do Hardware · Todos os direitos reservados
+    </footer>
+
+    <!-- Script AOS para animações -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
+    <script src="./js/livro4.js"></script>
 </body>
 
 </html>
