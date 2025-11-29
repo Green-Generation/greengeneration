@@ -1,0 +1,244 @@
+/* Reset básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor-principal: #5b7245;
+    --cor-secundaria: #1e3828;
+    --cor-hover: #426b3c;
+    --cor-fundo: rgba(59, 59, 59, 0.85);
+    --cor-texto: #ffffff;
+    --cor-destaque: #a3d55f;
+    --sombra-card: rgba(0, 255, 13, 0.2);
+    --font-principal: 'Montserrat', sans-serif;
+    --font-secundaria: 'Lora', serif;
+}
+
+
+/* Corpo */
+
+body {
+    font-family: var(--font-secundaria);
+    background: linear-gradient(135deg, #000, var(--cor-principal));
+    background-attachment: fixed;
+    color: var(--cor-texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+/* Dark mode */
+
+body.dark-mode {
+    background: #121212;
+    color: #ddd;
+}
+
+
+/* Navbar */
+
+nav.navbar {
+    background-color: #1c1c1c;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px var(--sombra-card);
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    user-select: none;
+}
+
+nav.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav.navbar a,
+nav.navbar button {
+    font-family: var(--font-principal);
+    color: var(--cor-texto);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background-color: var(--cor-principal);
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav.navbar a:hover,
+nav.navbar button:hover {
+    background-color: var(--cor-hover);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Container principal */
+
+main.container {
+    max-width: 1100px;
+    margin: 60px auto 80px;
+    padding: 0 20px;
+    flex-grow: 1;
+}
+
+
+/* Título da seção */
+
+main.container h2 {
+    font-family: var(--font-principal);
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+main.container h2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Grid de vídeos */
+
+#videoContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+
+/* Card de vídeo */
+
+.video-wrapper {
+    background-color: var(--cor-fundo);
+    border-radius: 15px;
+    padding: 18px;
+    box-shadow: 0 6px 20px var(--sombra-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.video-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.video-wrapper:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 28px var(--sombra-card);
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+
+/* Título do vídeo */
+
+.video-wrapper h3 {
+    font-family: var(--font-principal);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--cor-destaque);
+    margin-bottom: 8px;
+}
+
+
+/* Descrição do vídeo */
+
+.video-wrapper p {
+    font-family: var(--font-secundaria);
+    font-size: 1.05rem;
+    color: #ddd;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 30px;
+    color: #a3d55fcc;
+    font-family: var(--font-principal);
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 60px;
+}
+
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+    main.container {
+        margin: 40px auto 60px;
+    }
+    main.container h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main.container {
+        margin: 30px 15px 50px;
+    }
+    main.container h2 {
+        font-size: 1.8rem;
+    }
+    nav.navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+#darkModeBtn {
+    position: fixed;
+    /* Deixa o botão fixo na tela */
+    bottom: 1rem;
+    /* Distância de 20px da parte de baixo da tela */
+    right: 1rem;
+    /* Distância de 20px da parte direita da tela */
+    z-index: 1000;
+    /* Garante que fique por cima de outros elementos */
+}
